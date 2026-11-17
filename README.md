@@ -73,3 +73,7 @@ editor-texto-saas/
     ├── Dockerfile
     └── nginx.conf
 ```
+
+## Informe
+
+Informe del software en PDF (A1-U1): [docs/Informe_A1-U1_Editor_Texto_SaaS.pdf](docs/Informe_A1-U1_Editor_Texto_SaaS.pdf)
