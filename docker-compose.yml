@@ -1,0 +1,30 @@
+# Orquestación local del Editor de Texto SaaS.
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: saas_backend
+    ports:
+      - "8080:8080"
+    networks:
+      - saas-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        # Backend visto desde el NAVEGADOR (no desde el contenedor).
+        VITE_API_URL: http://localhost:8080
+    container_name: saas_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - saas-network
+
+networks:
+  saas-network:
+    driver: bridge

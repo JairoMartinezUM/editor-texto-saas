@@ -1,0 +1,11 @@
+target
+.git
+.github
+.vscode
+.mvn
+mvnw
+mvnw.cmd
+HELP.md
+openspec
+Dockerfile
+.dockerignore
